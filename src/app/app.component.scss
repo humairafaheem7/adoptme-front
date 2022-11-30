@@ -1,0 +1,27 @@
+
+.b-header--highlighted {
+    background-color: #EF3E42;
+}
+
+.footer {
+    height: 12rem;
+    background-color: blue;
+    padding:20px
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media (min-width: 992px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.footer-brand {
+   flex: auto;
+   color: white; 
+   font-size: 1rem;
+}

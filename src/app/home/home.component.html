@@ -1,0 +1,39 @@
+
+<div class="container-fluid">
+    <img src="../../assets/images/dogs.jpg" class="img-fluid" >
+</div>
+
+<div class="container-fluid pt-5">
+    <h2  class="text-center">Testimonials of the month</h2>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" (click)="onClick(1)" [ngClass]="{'active' : activeOption == 1}">Programs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="onClick(2)" [ngClass]="{'active' : activeOption == 2}">Associate Companies</a>
+        </li>
+    </ul>
+    <div [ngSwitch]="activeOption">
+        <div *ngSwitchCase="1">
+            <div class="card mb-3">
+                <div class="row g-0 testimonial-card" *ngFor="let program of programData">
+                    <div class="col-md-2">
+                        <img src="../../assets/images/{{ program.image }}" class="img-fluid rounded-start" alt="img">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">{{ program.title }}</h5>
+                        <p class="card-text">{{ program.summary }}</p>
+                        <p class="card-text"><a href="">Read more</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngSwitchCase="2">
+            <div class="mb-3 pt-4"  *ngFor="let assicate of associateData">
+                <p> {{ assicate.summary }}</p>
+            </div>
+        </div>
+    </div>      
+</div>

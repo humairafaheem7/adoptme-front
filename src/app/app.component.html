@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-light b-header--highlighted">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" routerLink="/home" routerLinkActive="active">
+      <img src="../assets/images/logo.png" width="30" height="24" class="d-inline-block align-text-top">
+      Adoptme.Org</a>
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Menu Icon">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link text-white" routerLinkActive="active" routerLink="/what-we-do">WHAT we do</a>
+        <a class="nav-link text-white" routerLinkActive="active" routerLink="/who-we-are">WHO we are</a>
+        <a class="nav-link text-white" routerLinkActive="active"  routerLink="/events-adoption">Events adoption</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<div class="footer">
+  <div class="container-fluid">
+    <div class="footer-section">
+      <a class="footer-brand" routerLink="/home" routerLinkActive="active">
+        <img src="../assets/images/logo.png" width="30" height="24" class="d-inline-block">
+        Adoptme.Org</a>
+
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLinkActive="active" routerLink="/what-we-do">WHAT we do</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLinkActive="active" routerLink="/who-we-are">WHO we are</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLinkActive="active"  routerLink="/events-adoption">Events adoption</a>
+          </li>
+        </ul>
+    </div>    
+  </div>
+</div>
