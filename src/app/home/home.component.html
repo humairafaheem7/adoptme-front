@@ -1,39 +1,77 @@
 
-<div class="container-fluid">
-    <img src="../../assets/images/dogs.jpg" class="img-fluid" >
+<div class="hero-image">
+    <div class="overlay-text">
+        <h2 class="overlay-title">This is your new family!</h2>
+        <a class="overlay-anchor">Adopt now</a>
+    </div>
 </div>
 
-<div class="container-fluid pt-5">
-    <h2  class="text-center">Testimonials of the month</h2>
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link" (click)="onClick(1)" [ngClass]="{'active' : activeOption == 1}">Programs</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="onClick(2)" [ngClass]="{'active' : activeOption == 2}">Associate Companies</a>
-        </li>
-    </ul>
-    <div [ngSwitch]="activeOption">
-        <div *ngSwitchCase="1">
-            <div class="card mb-3">
-                <div class="row g-0 testimonial-card" *ngFor="let program of programData">
-                    <div class="col-md-2">
-                        <img src="../../assets/images/{{ program.image }}" class="img-fluid rounded-start" alt="img">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                        <h5 class="card-title">{{ program.title }}</h5>
-                        <p class="card-text">{{ program.summary }}</p>
-                        <p class="card-text"><a href="">Read more</a></p>
+<div class="container pt-5 row">
+    <div class="feature-card col-sm-12 col-md-12 col-lg-3">
+        <div class="card mb-3">
+            <div class="card-header">VALUNTEERS</div>
+            <div class="card-body">
+                <img src="../../assets/images/girl.png" class="img-fluid" alt="img">
+            </div>
+            <div class="card-footer">
+                <p class="footer-summary">
+                    Amazinp people, doing the difference every single day join us now and be part of a community than is changing the world.
+                </p>
+                <a class="footer-anchor">join us</a>
+            </div>
+        </div>
+    </div>
+    <div class="testimonial-banner col-sm-12 col-md-12 col-lg-9">
+        <div class="card mb-3">
+            <div class="card-header">VALUNTEERS</div>
+            <div class="card-body">
+                <img src="../../assets/images/testimonial.jpg" class="img-fluid" alt="img">
+            </div>
+            <div class="card-footer">
+                Mangi, my best friend who saved my life.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container pt-5">
+    <div class="row testimonial-section">
+        <div class="col-md-8">
+            <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" (click)="onClick(1)" [ngClass]="{'active' : activeOption == 1}">Programs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" (click)="onClick(2)" [ngClass]="{'active' : activeOption == 2}">Associate Companies</a>
+                </li>
+            </ul>
+            <div [ngSwitch]="activeOption">
+                <div *ngSwitchCase="1">
+                    <div class="card mb-3">
+                        <div class="row g-0 testimonial-card" *ngFor="let program of programData">
+                            <div class="col-md-2">
+                                <img src="../../assets/images/{{ program.image }}" class="img-fluid" alt="img">
+                            </div>
+                            <div class="col-md-10">
+                                <div class="card-body">
+                                <h5 class="card-title">{{ program.title }}</h5>
+                                <p class="card-text">{{ program.summary }}</p>
+                                <p class="card-text"><a href="">Read more</a></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div *ngSwitchCase="2">
+                    <div class="mb-3 pt-4"  *ngFor="let assicate of associateData">
+                        <p> {{ assicate.summary }}</p>
+                    </div>
+                </div>
+            </div> 
         </div>
-        <div *ngSwitchCase="2">
-            <div class="mb-3 pt-4"  *ngFor="let assicate of associateData">
-                <p> {{ assicate.summary }}</p>
-            </div>
+        <div class="col-md-4 right-image">
+            <img src="../../assets/images/single-dog.jpg">
         </div>
-    </div>      
+    </div>
+        
 </div>

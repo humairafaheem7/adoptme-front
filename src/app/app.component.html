@@ -19,12 +19,19 @@
 <router-outlet></router-outlet>
 
 <div class="footer">
-  <div class="container-fluid">
-    <div class="footer-section">
+  <div class="container">
       <a class="footer-brand" routerLink="/home" routerLinkActive="active">
         <img src="../assets/images/logo.png" width="30" height="24" class="d-inline-block">
-        Adoptme.Org</a>
-
+        Adoptme.Org
+      </a>
+      <div class="footer-section">
+        <div class="footer-address">
+          <p>
+            Main St #1245 <br/>
+            Amazing City. 45677
+          </p>
+        </div>
+         
         <ul class="nav justify-content-end">
           <li class="nav-item">
             <a class="nav-link text-white" routerLinkActive="active" routerLink="/what-we-do">WHAT we do</a>
@@ -36,6 +43,10 @@
             <a class="nav-link text-white" routerLinkActive="active"  routerLink="/events-adoption">Events adoption</a>
           </li>
         </ul>
-    </div>    
+
+      </div> 
+      <div class="footer-secondary">
+        <p>Some images were taken from unsplash.com</p>
+      </div>
   </div>
 </div>
