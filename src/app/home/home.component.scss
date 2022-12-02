@@ -167,7 +167,11 @@
 
 .right-image{
     display: flex;
-    justify-content: right;
+    justify-content: center;
+    height: 400px;
+    @media (min-width: 992px) {  
+        justify-content: right;
+    }
     img {
         padding: 50px
     }
